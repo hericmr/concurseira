@@ -1,0 +1,54 @@
+/* styles.css */
+body {
+    background-color: #f8f9fa; /* Fundo claro */
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    background-color: #ffa564; /* Cabeçalho escuro */
+    color: #150000;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.question-card {
+    margin-top: 20px;
+    transition: transform 0.2s; /* Efeito de transição */
+}
+
+.question-card:hover {
+    transform: scale(1.02); /* Aumenta o tamanho ao passar o mouse */
+}
+
+.question-text {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#submit-btn {
+    display: none; /* Oculta o botão de enviar inicialmente */
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #ff9500; /* Rodapé escuro */
+    color: rgb(0, 0, 0);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.form-control {
+    border-radius: 0; /* Bordas retas */
+}
+
+.btn-custom {
+    background-color: #ff00009f; /* Cor personalizada do botão */
+    color: white;
+}
+
+.btn-custom:hover {
+    background-color: #b30000; /* Cor do botão ao passar o mouse */
+}
