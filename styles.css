@@ -1,23 +1,43 @@
 /* styles.css */
 body {
-    background-color: #f8f9fa; /* Fundo claro */
-    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Fundo claro e neutro */
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6; /* Melhor legibilidade */
 }
 
 .header {
-    background-color: #ffa564; /* Cabeçalho escuro */
-    color: #150000;
+    background-color: #000f20; /* Cabeçalho em azul */
+    color: white; /* Texto em branco */
     padding: 20px 0;
     text-align: center;
+    border-bottom: 3px solid #0056b3; /* Sombra no cabeçalho */
+}
+
+.header h1 {
+    font-size: 2.5em; /* Tamanho da fonte maior para o título */
+    margin: 0; /* Remove margens */
+}
+
+.header p {
+    margin: 0; /* Remove margens dos parágrafos */
+    padding: 5px 20px; /* Espaçamento nos parágrafos */
+}
+
+.container {
+    max-width: 800px; /* Largura máxima da container */
+    margin: 20px auto; /* Centraliza a container */
 }
 
 .question-card {
     margin-top: 20px;
-    transition: transform 0.2s; /* Efeito de transição */
+    background-color: white; /* Fundo branco para as questões */
+    border-radius: 5px; /* Bordas arredondadas */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    padding: 15px; /* Espaçamento interno */
 }
 
 .question-card:hover {
-    transform: scale(1.02); /* Aumenta o tamanho ao passar o mouse */
+    transform: translateY(-2px); /* Levanta levemente ao passar o mouse */
 }
 
 .question-text {
@@ -32,23 +52,36 @@ body {
 footer {
     margin-top: 20px;
     text-align: center;
-    padding: 10px 0;
-    background-color: #ff9500; /* Rodapé escuro */
-    color: rgb(0, 0, 0);
-    position: fixed;
-    bottom: 0;
+    padding: 15px 0; /* Aumenta o espaçamento do rodapé */
+    background-color: #000000; /* Rodapé escuro */
+    color: white; /* Texto em branco no rodapé */
+    position: fixed; /* Fixa o rodapé */
+    bottom: 0; /* Posiciona na parte inferior */
     width: 100%;
+}
+
+footer a {
+    color: #5678ff; /* Cor do link */
+    text-decoration: none; /* Remove o sublinhado */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Sublinha ao passar o mouse */
 }
 
 .form-control {
     border-radius: 0; /* Bordas retas */
+    box-shadow: none; /* Remove a sombra padrão */
+    border: 1px solid #ced4da; /* Borda padrão */
 }
 
 .btn-custom {
-    background-color: #ff00009f; /* Cor personalizada do botão */
+    background-color: #007bff; /* Cor do botão em azul */
     color: white;
+    border: none; /* Remove borda padrão */
+    transition: background-color 0.3s; /* Transição suave para o botão */
 }
 
 .btn-custom:hover {
-    background-color: #b30000; /* Cor do botão ao passar o mouse */
+    background-color: #0056b3; /* Cor do botão ao passar o mouse */
 }
