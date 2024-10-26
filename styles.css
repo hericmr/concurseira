@@ -69,7 +69,7 @@ footer a:hover {
     text-decoration: underline; /* Sublinha ao passar o mouse */
 }
 
-.form-control {
+
     border-radius: 0; /* Bordas retas */
     box-shadow: none; /* Remove a sombra padrão */
     border: 1px solid #ced4da; /* Borda padrão */
