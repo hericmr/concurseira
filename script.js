@@ -10,10 +10,10 @@ function loadData() {
         .catch(error => console.error('Erro:', error));
 }
 
-// Função para preencher o dropdown com os cargos disponíveis
+
 function populateCargoOptions(data) {
     const cargoSelect = document.getElementById('cargo');
-    const uniqueCargos = [...new Set(data.map(item => item.cargo))]; // Extrair cargos únicos
+    const uniqueCargos = [...new Set(data.map(item => item.cargo))]; 
     
     uniqueCargos.forEach(cargo => {
         const option = document.createElement('option');
@@ -26,7 +26,7 @@ function populateCargoOptions(data) {
 // Função para exibir as questões
 function displayQuestions(selectedData) {
     const questionContainer = document.getElementById('question-container');
-    questionContainer.innerHTML = ''; // Limpa questões anteriores
+    questionContainer.innerHTML = ''; 
 
     selectedData.forEach((item, index) => {
         const card = document.createElement('div');
@@ -50,35 +50,35 @@ function displayQuestions(selectedData) {
         questionContainer.appendChild(card);
     });
     
-    document.getElementById('submit-btn').style.display = 'block'; // Mostrar botão de enviar
+    document.getElementById('submit-btn').style.display = 'block'; 
 }
 
-// Função para gerar simulado com base nas opções selecionadas
+
 document.getElementById('simulado-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Evita o envio do formulário
+    event.preventDefault(); 
 
     const selectedCargo = document.getElementById('cargo').value;
     const numeroQuestoes = parseInt(document.getElementById('numero-questoes').value);
 
-    // Filtrar questões com base no cargo selecionado
+
     loadData().then(data => {
         const filteredData = data.filter(item => item.cargo === selectedCargo);
         
-        // Selecionar aleatoriamente as questões desejadas
+    
         const selectedQuestions = [];
         for (let i = 0; i < Math.min(numeroQuestoes, filteredData.length); i++) {
             const randomIndex = Math.floor(Math.random() * filteredData.length);
             selectedQuestions.push(filteredData[randomIndex]);
-            filteredData.splice(randomIndex, 1); // Remove a questão selecionada para não ser escolhida novamente
+            filteredData.splice(randomIndex, 1); 
         }
 
-        displayQuestions(selectedQuestions); // Exibe as questões selecionadas
+        displayQuestions(selectedQuestions); 
     });
 });
 
-// Carregar os dados e popular o dropdown ao carregar a página
+
 document.addEventListener('DOMContentLoaded', () => {
     loadData().then(data => {
-        populateCargoOptions(data); // Preenche as opções de cargo
+        populateCargoOptions(data); 
     });
 });
